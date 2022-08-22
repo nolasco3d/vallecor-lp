@@ -1,30 +1,48 @@
 <script setup>
+import badgeWhite from "./assets/badge-white.svg"
+import logoColor from "./assets/logo-color.svg"
+import logoWhite from "./assets/logo-white.svg"
+import hero from "./assets/hero.png"
+import heroMobile from "./assets/hero_mobile.png"
+import iconCoin from "./assets/icon-coin.svg"
+import iconBucketPencil from "./assets/icon-bucket-pencil.svg"
+import iconRoll from "./assets/icon-roll.svg"
+import iconBucket from "./assets/icon-bucket.svg"
+import recipe36 from "./assets/bucket-size-icon-36l.svg"
+import recipe15 from "./assets/bucket-size-icon-15l.svg"
+import bucket1 from "./assets/Group_126.png"
+import bucket2 from "./assets/Group_130.png"
+import bucket3 from "./assets/Group_154.png"
+import sofa from "./assets/sofa.png"
+import pintor from "./assets/pintor.png"
+import rightDec from "./assets/right-decorator.svg"
+import beforeForm from "./assets/frame-form-before.svg"
+import badgePurple from "./assets/badge-purple.svg"
 
 </script>
 
 <template>
-  <main class="">
-    <section class="
-        bg-[#4F008C] 
-          md:bg-[url(src/assets/hero.png)] 
-          md:bg-right-top md:bg-[length:720px_auto]
-          bg-no-repeat">
+  <main>
+    <section :class="
+      `bg-[#4F008C] 
+    md:bg-[url(${hero})] 
+    md:bg-right-top md:bg-[length:720px_auto]
+    bg-no-repeat`">
       <div class="container mx-auto text-white  md:py-24 max-w-6xl">
-        <img class="badge hidden md:block" src="src/assets/badge-white.svg"
+        <img class="badge hidden md:block" :src="badgeWhite"
           alt="Selo leinertex">
 
         <div class="columns-1 relative text-center md:text-left">
           <!-- LOGO MOBILE -->
-          <img class="md:hidden h-7 absolute top-8 left-6"
-            src="src/assets/logo-color.svg" alt="Logo vallecor mobile">
+          <img class="md:hidden h-7 absolute top-8 left-6" :src="logoColor"
+            alt="Logo vallecor mobile">
 
           <!-- LOGO DESKTOP -->
-          <img class="mb-16 hidden md:block" src="src/assets/logo-white.svg"
+          <img class="mb-16 hidden md:block" :src="logoWhite"
             alt="Logo vallecor">
 
           <!-- HERO MOBILE -->
-          <img class="md:hidden" src="src/assets/hero_mobile.png"
-            alt="Hero Mobile">
+          <img class="md:hidden" :src="heroMobile" alt="Hero Mobile">
 
           <h2 class="mb-8 md:mb-16 pt-32 text-3xl md:text-5xl md:pt-0  ">
             Economia e qualidade <br />
@@ -42,21 +60,19 @@
 
         <div class="grid grid-cols-2 gap-y-8 pb-8 md:pb-4 md:grid-cols-4">
           <div class="text-center font-black flex flex-col self-baseline">
-            <img class="icon mx-auto" src="src/assets/icon-coin.svg" alt="Icon">
+            <img class="icon mx-auto" :src="iconCoin" alt="Icon">
             Economia na hora <br />de pintar
           </div>
           <div class="text-center font-black flex flex-col self-baseline">
-            <img class="icon mx-auto" src="src/assets/icon-bucket-pencil.svg"
-              alt="Icon">
+            <img class="icon mx-auto" :src="iconBucketPencil" alt="Icon">
             Fácil de <br />aplicar
           </div>
           <div class="text-center font-black flex flex-col self-baseline">
-            <img class="icon mx-auto" src="src/assets/icon-roll.svg" alt="Icon">
+            <img class="icon mx-auto" :src="iconRoll" alt="Icon">
             Boa Cobertura
           </div>
           <div class="text-center font-black flex flex-col self-baseline">
-            <img class="icon mx-auto" src="src/assets/icon-bucket.svg"
-              alt="Icon">
+            <img class="icon mx-auto" :src="iconBucket" alt="Icon">
             Cores variadas <br />para ambientes <br />mais bonitos
           </div>
         </div>
@@ -74,10 +90,11 @@
         px-3 gap-4 md:gap-12 pt-[80px] pb-7 md:pt-0 md:pb-0
         md:container md:mx-auto md:max-w-6xl md:flex-col ">
 
+        <!-- CARD 1 -->
         <div
           class="bg-[#8B2FAE] rounded-lg md:flex min-w-[320px] md:w-auto text-white px-5 md:px-10 py-5 flex-row-reverse justify-between">
-          <img class="card-product__image mt-[-100px] md:mt-0"
-            src="src/assets/Group 126.png" alt="Product" />
+          <img class="card-product__image mt-[-100px] md:mt-0" :src="bucket1"
+            alt="Product" />
 
           <div
             class="xxx md:text-left flex flex-col md:flex-row flex-1 gap-5 justify-around">
@@ -88,8 +105,8 @@
 
               <div
                 class="flex items-baseline justify-center md:justify-start gap-8">
-                <img src="src/assets/bucket-size-icon-36l.svg" alt="">
-                <img src="src/assets/bucket-size-icon-15l.svg" alt="">
+                <img :src="recipe36" alt="">
+                <img :src="recipe15" alt="">
               </div>
 
               <div class="hidden md:flex">
@@ -124,13 +141,14 @@
           </div>
         </div>
 
-        <div
-          class="bg-[#37C0C9] rounded-lg md:flex min-w-[320px] md:w-auto text-white px-10 py-5 justify-between">
-          <img class="card-product__image " src="src/assets/Group 130.png"
-            alt="Product" />
+        <!-- CARD 2 -->
+        <div class="bg-[#37C0C9] 
+          rounded-lg text-white px-5 py-5 flex flex-col
+          min-w-[320px] md:w-auto md:px-10 md:flex md:flex-row ">
+          <img class="mt-[-100px] md:mt-0" :src="bucket2" alt="Product" />
 
           <div
-            class="xxx text-center md:text-left flex flex-col md:flex-row flex-1 gap-5 justify-around">
+            class="xxx md:text-left flex flex-col md:flex-row flex-1 gap-5 justify-self-end md:justify-around">
             <div class="flex flex-col justify-around">
               <h5 class="text-4xl md:text-5xl font-black mb-1">Massa Corrida
               </h5>
@@ -139,8 +157,8 @@
 
               <div
                 class="flex items-baseline justify-center md:justify-start gap-8">
-                <img src="src/assets/bucket-size-icon-36l.svg" alt="">
-                <img src="src/assets/bucket-size-icon-15l.svg" alt="">
+                <img :src="recipe36" alt="">
+                <img :src="recipe15" alt="">
               </div>
 
               <div class="hidden md:flex">
@@ -155,20 +173,34 @@
               </div>
             </div>
 
-            <div class="flex flex-col justify-around font-black max-w-[180px]">
+            <div
+              class="flex flex-col justify-around  font-black max-w-[180px] gap-y-5 md:gap-y-1 text-left self-center md:self-auto grow">
               <p>Fácil de Aplicar e Lixar</p>
               <p>Nivela e corrige imperfeições da parede</p>
+            </div>
+
+            <div class="flex md:hidden">
+              <button class="btn yellow">Ver Cores</button>
+              <button class="btn-download">
+                <span class="material-symbols-outlined">download</span>
+                <p class="m-0 pl-2 flex flex-col">
+                  <strong class="font-black">DOWNLOAD</strong>
+                  FICHA TÉCNICA
+                </p>
+              </button>
             </div>
           </div>
         </div>
 
-        <div
-          class="bg-[#FF9E32] rounded-lg md:flex min-w-[320px] md:w-auto text-white px-10 py-5 flex-row-reverse justify-between">
-          <img class="card-product__image " src="src/assets/Group 154.png"
-            alt="Product" />
+        <!-- CARD 3 -->
+        <div class="bg-[#FF9E32] 
+          rounded-lg text-white px-5 py-5 flex flex-col
+          min-w-[320px] md:w-auto md:px-10 md:flex md:flex-row-reverse 
+          items-center">
+          <img class="mt-[-100px] md:mt-0" :src="bucket3" alt="Product" />
 
           <div
-            class="xxx text-center md:text-left flex flex-col md:flex-row flex-1 gap-5 justify-around">
+            class="xxx md:text-left flex flex-col md:flex-row flex-1 gap-5 justify-self-end md:justify-around">
             <div class="flex flex-col justify-around">
               <h5 class="text-4xl md:text-5xl font-black mb-1">Esmalte Sintético
               </h5>
@@ -177,8 +209,8 @@
 
               <div
                 class="flex items-baseline justify-center md:justify-start gap-8">
-                <img src="src/assets/bucket-size-icon-36l.svg" alt="">
-                <img src="src/assets/bucket-size-icon-15l.svg" alt="">
+                <img :src="recipe36" alt="">
+                <img :src="recipe15" alt="">
               </div>
 
               <div class="hidden md:flex">
@@ -193,10 +225,22 @@
               </div>
             </div>
 
-            <div class="flex flex-col justify-around font-black max-w-[180px]">
+            <div
+              class="flex flex-col justify-around  font-black max-w-[180px] gap-y-5 md:gap-y-1 text-left self-center md:self-auto grow">
               <p>Corrige e uniformiza a absorção</p>
               <p>Melhor aderência da tinta</p>
               <p>Mais rendimento da tinta</p>
+            </div>
+
+            <div class="flex md:hidden">
+              <button class="btn yellow">Ver Cores</button>
+              <button class="btn-download">
+                <span class="material-symbols-outlined">download</span>
+                <p class="m-0 pl-2 flex flex-col">
+                  <strong class="font-black">DOWNLOAD</strong>
+                  FICHA TÉCNICA
+                </p>
+              </button>
             </div>
           </div>
         </div>
@@ -207,7 +251,7 @@
     <section class="flex text-white flex-wrap">
       <div class="bg-[#13467E] md:flex-1 w-full">
         <div class="flex justify-end">
-          <img src="src/assets/sofa.png" alt="Imagem sofá" />
+          <img :src="sofa" alt="Imagem sofá" />
         </div>
 
         <div class="max-w-sm mx-auto my-10 px-6 md:p-0">
@@ -223,7 +267,7 @@
 
       <div class="bg-[#37C0C9] md:flex-1 w-full">
         <div class="flex justify-end">
-          <img src="src/assets/pintor.png" alt="Imagem sofá">
+          <img :src="pintor" alt="Imagem sofá">
         </div>
 
         <div class="max-w-sm mx-auto my-10 px-6 md:p-0">
@@ -293,8 +337,8 @@
     </section>
 
     <section class="bg-[#4F008C] py-16 text-white relative min-h-0 h-auto">
-      <img class="hidden md:block absolute top-[-48px] right-0 "
-        src="src/assets/right-decorator.svg" alt="Decorator">
+      <img class="hidden md:block absolute top-[-48px] right-0 " :src="rightDec"
+        alt="Decorator">
       <div class="container mx-auto text-center max-w-3xl">
 
         <h4 class="text-2xl font-light mb-6">
@@ -338,14 +382,14 @@
 
   <footer class="relative flex justify-between px-6 md:justify-around py-12">
     <img class=" hidden md:block absolute top-0 translate-y-[-50%] left-0"
-      src="src/assets/frame-form-before.svg" alt="Decorator">
+      :src="beforeForm" alt="Decorator">
 
     <img
       class=" w-[100px] md:w-auto absolute top-0 left-[50%] translate-x-[-50%]"
-      src="src/assets/badge-purple.svg" alt="Decorator">
+      :src="badgePurple" alt="Decorator">
 
-    <img class="h-[26px] md:h-auto md:mr-[170px]"
-      src="src/assets/logo-color.svg" alt="Logo Vallecor">
+    <img class="h-[26px] md:h-auto md:mr-[170px]" :src="logoColor"
+      alt="Logo Vallecor">
 
     <div class="flex flex-col">
       <span
