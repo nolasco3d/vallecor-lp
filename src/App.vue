@@ -6,7 +6,6 @@
   <main class="">
     <section class="
         bg-[#4F008C] 
-          
           md:bg-[url(src/assets/hero.png)] 
           md:bg-right-top md:bg-[length:720px_auto]
           bg-no-repeat">
@@ -33,7 +32,7 @@
               sempre sonhou</strong>
           </h2>
 
-          <button class="btn large blue mb-20">Conheça nossa linha</button>
+          <button class="btn btn-large blue mb-20">Conheça nossa linha</button>
 
           <h3 class="mb-10 md:mb-20 text-2xl md:text-4xl">
             A escolha certa para quem <br />
@@ -370,57 +369,49 @@
     'opsz' 48
 }
 
-
-section {
-  /* height: 100vh; */
-}
-
 .badge {
   @apply absolute top-0 right-[50%] translate-x-[50%];
 }
 
 .btn {
   @apply rounded font-black text-sm bg-slate-200 py-[10px] px-[33px];
+
+  &.purple {
+    @apply bg-purple-500;
+  }
+
+  &.blue {
+    @apply bg-[#37C0C9];
+  }
+
+  &.yellow {
+    @apply bg-[#FFE600] text-[#8B2FAE];
+  }
+
+  &.white {
+    @apply bg-white text-[#13467E];
+  }
+
+  &-download {
+    @apply flex items-center text-sm px-4 py-1 leading-none text-[#FFE600];
+  }
+
+  &-large {
+    @apply py-[16px] px-[20px];
+  }
+
+  .icon-wrapper {
+    @apply flex flex-col items-center self-stretch text-center font-black;
+  }
 }
 
-.btn.large {
-  @apply py-[16px] px-[20px];
-}
 
-.btn.blue {
-  @apply bg-[#37C0C9];
-}
 
-.btn.yellow {
-  @apply bg-[#FFE600] text-[#8B2FAE];
-}
-
-.btn.white {
-  @apply bg-white text-[#13467E];
-}
-
-.btn-download {
-  @apply flex items-center text-sm px-4 py-1 leading-none text-[#FFE600];
-}
-
-.icon-wrapper {
-  @apply flex flex-col items-center self-stretch text-center font-black;
-}
-
-.card-product {
+/* .btn .btn .card-product {
   @apply rounded-lg flex text-white px-10 py-5;
 }
 
-/* 
-.sect {
-  display: flex;
-flex-direction: column;
-height: 100%;
-justify-content: space-around;
-} 
-*/
-
 .icon-wrapper .icon {
   @apply min-h-[90px] mb-3;
-}
+} */
 </style>
